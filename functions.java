@@ -10,6 +10,7 @@ import java.util.regex.Pattern;
 /**
  *
  * @author Daniel Eads dje76
+ * @edited Tyler Winstead tmw293
  */
 public class functions {
 
@@ -30,8 +31,13 @@ public class functions {
         return (float) Math.sqrt(Math.pow(x1 - x2, 2) + Math.pow(y1 - y2, 2));
     }
     
+<<<<<<< HEAD
     public boolean email_varifier(String email){
         String expression = "(.+)@(.+)\\.(.{1,3})";
+=======
+    public boolean email_verifier(String email){
+        String expression = "(.+)@(.+)\\.(... || .. || .)";
+>>>>>>> 51da9858a1d22e0120af6a251f53ffe42c7ca319
         Pattern exp = Pattern.compile(expression);
         Matcher m = exp.matcher(email);
         return m.find();
