@@ -6,7 +6,7 @@ package assignment4;
  * First 3 tests should pass, and the fourth should fail due to death.
  */
 
-public class test_batch_3 {
+public class test_batch_2 {
     public static void main(String[] args) {
         functions function = new functions();
         
