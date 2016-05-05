@@ -22,7 +22,8 @@ public class functions {
     
     public float retirement(float goal, float income, float percent, int age){
         float saved_per_year = (float) (income * (percent/100) * 2);
-        return goal/saved_per_year;
+        float years_to_retire = goal/saved_per_year;
+        return age + years_to_retire;
     }
     
     public float distance(float x1, float y1, float x2, float y2){
