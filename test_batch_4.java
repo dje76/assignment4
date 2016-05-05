@@ -5,7 +5,7 @@ package assignment4;
  * @author Daniel Eads dje76
  * Tests the email verifier part of the application.
  */
-public class test_batch_1 {
+public class test_batch_4 {
     public static void main(String[] args) {
         functions function = new functions();
         
