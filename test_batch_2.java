@@ -1,49 +1,88 @@
 package assignment4;
 
 /**
- *
- * @author Daniel Eads dje76
- * Tests the BMI part of the application.
+ * @author Tyler Winstead tmw293
+ * Tests the retirement requirement of the application.
+ * First 3 tests should pass, and the fourth should fail due to death.
  */
+
 public class test_batch_2 {
-        public static void main(String[] args) {
+    public static void main(String[] args) {
         functions function = new functions();
         
-        float hight1 = 63;
-        float weight1 = 125;
-        float hight2 = 80;
-        float weight2 = 150;
-        float hight3 = 60;
-        float weight3 = 180;
+        float goal1 = 401000;
+        float income1 = 100000;
+        float percent1 = 10;
+        int age1 = 40;
         
-        float expected1 = (float) 22.7;
-        float expected2 = (float) 16.9;
-        float expected3 = (float) 36;
         
-        float BMI1 = (float) (Math.round(function.BMI(hight1,weight1)*10)/10.0);
-        float BMI2 = (float) (Math.round(function.BMI(hight2,weight2)*10)/10.0);
-        float BMI3 = (float) (Math.round(function.BMI(hight3,weight3)*10)/10.0);
+        float goal2 = 500000;
+        float income2 = 150000;
+        float percent2 = 12;
+        int age2 = 45;
         
-        if(expected1 == BMI1){
-            System.out.println("Test 1 PASS");
+        float goal3 = 1000000;
+        float income3 = 200000;
+        float percent3 = 15;
+        int age3 = 50;
+        
+        float goal4 = 5000000;
+        float income4 = 200000;
+        float percent4 = 15;
+        int age4 = 55;
+        
+        int expected1 = 60;
+        int expected2 = 58;
+        int expected3 = 66;
+        int expected4 = 138;
+        
+        int retire_age1 = (int) function.retirement(goal1, income1, percent1, age1);
+        int retire_age2 = (int) function.retirement(goal2, income2, percent2, age2);
+        int retire_age3 = (int) function.retirement(goal3, income3, percent3, age3);
+        int retire_age4 = (int) function.retirement(goal4, income4, percent4, age4);
+        
+        if (retire_age1 == expected1 && retire_age1 < 100) {
+            System.out.println("Test 1: PASSED");
         }
-        else{
-            System.out.println("Test 1 FAIL");
+        else {
+            System.out.println("Test 1: FAILED");
+            if (retire_age2 >= 100) {
+                System.out.println("Deceased");
+            }
         }
-        System.out.println("Expected: " + expected1 + " actual: " + BMI1 + "\n");
-        if(expected2 == BMI2){
-            System.out.println("Test 2 PASS");
+        System.out.println("Expected: " + expected1 + "\tActual: " + retire_age1 + "\n");
+
+        if (retire_age2 == expected2 && retire_age2 < 100) {
+            System.out.println("Test 2: PASSED");
         }
-        else{
-            System.out.println("Test 2 FAIL");
-        }    
-        System.out.println("Expected: " + expected2 + " actual: " + BMI2 + "\n");
-        if(expected3 == BMI3){
-            System.out.println("Test 3 PASS");
+        else {
+            System.out.println("Test 2: FAILED");
+            if (retire_age2 >= 100) {
+                System.out.println("Deceased");
+            }
         }
-        else{
-            System.out.println("Test 3 FAIL");
-        } 
-        System.out.println("Expected: " + expected3 + " actual: " + BMI3 + "\n");
+        System.out.println("Expected: " + expected2 + "\tActual: " + retire_age2 + "\n");
+        
+        if (retire_age3 == expected3 && retire_age3 < 100) {
+            System.out.println("Test 3: PASSED");
+        }
+        else {
+            System.out.println("Test 3: FAILED");
+            if (retire_age3 >= 100) {
+                System.out.println("Deceased");
+            }
+        }
+        System.out.println("Expected: " + expected3 + "\tActual: " + retire_age3 + "\n");
+    
+        if (retire_age4 == expected4 && retire_age4 < 100) {
+            System.out.println("Test 4: PASSED");
+        }
+        else {
+            System.out.println("Test 4: FAILED");
+            if (retire_age4 >= 100) {
+                System.out.println("Deceased");
+            }
+        }
+        System.out.println("Expected: " + expected4 + "\tActual: " + retire_age4 + "\n");
     }
 }
