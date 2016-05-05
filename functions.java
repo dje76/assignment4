@@ -10,6 +10,7 @@ import java.util.regex.Pattern;
 /**
  *
  * @author Daniel Eads dje76
+ * @edited Tyler Winstead tmw293
  */
 public class functions {
 
