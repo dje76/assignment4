@@ -5,7 +5,7 @@ package assignment4;
  * @author Daniel Eads dje76
  * Tests the BMI part of the application.
  */
-public class test_batch_2 {
+public class test_batch_1 {
         public static void main(String[] args) {
         functions function = new functions();
         
