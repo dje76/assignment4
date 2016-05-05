@@ -36,7 +36,7 @@ public class functions {
         String expression = "(.+)@(.+)\\.(.{1,3})";
 =======
     public boolean email_verifier(String email){
-        String expression = "(.+)@(.+)\\.(... || .. || .)";
+        String expression = "(.+)@(.+)\\.(.{1,3})";
 >>>>>>> 51da9858a1d22e0120af6a251f53ffe42c7ca319
         Pattern exp = Pattern.compile(expression);
         Matcher m = exp.matcher(email);
