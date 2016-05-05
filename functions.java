@@ -17,8 +17,7 @@ public class functions {
     public float BMI(float hight, float weight){
         float metric_weight = (float) (weight * 0.45);
         float metric_hight = (float) (hight *0.025);
-        
-        return (float) Math.pow(metric_hight, 2) / metric_weight;
+        return (float) (metric_weight)/(metric_hight * metric_hight);
     }
     
     public float retirement(float goal, float income, float percent, int age){
