@@ -31,7 +31,7 @@ public class functions {
     }
     
     public boolean email_varifier(String email){
-        String expression = "(.+)@(.+)\\.(... || .. || .)";
+        String expression = "(.+)@(.+)\\.(.{1,3})";
         Pattern exp = Pattern.compile(expression);
         Matcher m = exp.matcher(email);
         return m.find();
